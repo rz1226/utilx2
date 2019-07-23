@@ -42,4 +42,3 @@ func (c *Counters) Str(name string) string {
 	}
 	return obj.Str()
 }
-

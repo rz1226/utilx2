@@ -1,18 +1,16 @@
 package bitmap
 
 import (
-
 	"math/rand"
 	"sync"
 	"time"
 )
 
-
 type BitMap struct {
-	m            sync.RWMutex
-	byteLine         []byte
+	m                     sync.RWMutex
+	byteLine              []byte
 	lastTimeSyncToStorage int64 //最后同步时间
-	dirtyCount  int   //最后一次同步之后又经过了多少次修改
+	dirtyCount            int   //最后一次同步之后又经过了多少次修改
 }
 
 func NewBitMap(dataInit []byte) *BitMap {
@@ -87,7 +85,7 @@ func (this *BitMap) update(pos int, val byte) bool {
 	return true
 
 }
-func (this *BitMap) DirtyCount()int{
+func (this *BitMap) DirtyCount() int {
 	return this.dirtyCount
 }
 

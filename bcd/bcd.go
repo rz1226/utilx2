@@ -1,4 +1,5 @@
 package bcd
+
 //bcd编码
 func IntToBcd(value int) int {
 	return (((value / 10) % 10) << 4) | (value % 10)

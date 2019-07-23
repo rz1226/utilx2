@@ -1,9 +1,9 @@
 package logx
 
 import (
-	"github.com/xiaobai22/utilx2/circleq"
 	"bytes"
 	"fmt"
+	"github.com/xiaobai22/utilx2/circleq"
 	"strconv"
 	"time"
 )

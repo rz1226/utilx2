@@ -6,13 +6,13 @@ import (
 
 //只保留最近写入的部分数据
 type CQ struct {
-	seqNum uint64
-	size  uint32
-	dataList  []ele
+	seqNum   uint64
+	size     uint32
+	dataList []ele
 }
 
 type ele struct {
-	seqNum uint64
+	seqNum       uint64
 	contentValue interface{}
 }
 

@@ -9,7 +9,7 @@ import (
 )
 
 type Ejson struct {
-	j interface{} //json对象，一般是[]interface{}或者map[string]interface{}
+	j          interface{} //json对象，一般是[]interface{}或者map[string]interface{}
 	sReplicate string      //json字符串， j的数据的字符串形式，内容是相同的
 }
 
@@ -44,6 +44,7 @@ func NewEjson(jsonData interface{}) (*Ejson, error) {
 	e.sReplicate = string(jsonBytes)
 	return &e, nil
 }
+
 //重新计算sreplicate
 func (e *Ejson) RenewSReplicate() {
 	jsonBytes, _ := json.Marshal(e.j)
@@ -53,7 +54,6 @@ func (e *Ejson) RenewSReplicate() {
 func (e *Ejson) Json() interface{} {
 	return e.j
 }
-
 
 func (e *Ejson) Bytes() []byte {
 	return []byte(e.sReplicate)
@@ -285,7 +285,7 @@ func (e *Ejson) GetArrayData() []interface{} {
 	}
 	return make([]interface{}, 1)
 }
-  
+
 func (e *Ejson) MergeMap(a *Ejson) (*Ejson, error) {
 	if !e.IsMap() || !a.IsMap() {
 		return nil, errors.New("ejson:merge 两个值必须都是map")

@@ -70,7 +70,6 @@ func Write(w io.Writer, data []byte) error {
 		log.Println("this should not happen")
 	}
 
-
 	body := []byte{}
 	body = append(body, data...)
 	lengthBody, err := w.Write(body)

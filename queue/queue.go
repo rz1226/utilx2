@@ -53,7 +53,7 @@ type RedisQueue struct {
 	Key       string
 }
 
-func NewRedisQueue(redisPool *redis.Pool , key string) *RedisQueue {
+func NewRedisQueue(redisPool *redis.Pool, key string) *RedisQueue {
 	r := &RedisQueue{}
 	r.RedisPool = redisPool
 	r.Key = key

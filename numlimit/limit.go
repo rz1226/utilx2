@@ -14,7 +14,7 @@ x.Done()
 */
 
 type NumLimiter struct {
-	maxValue   uint32
+	maxValue     uint32
 	currentValue uint32
 }
 

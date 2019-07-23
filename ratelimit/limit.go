@@ -27,9 +27,9 @@ func main(){
 */
 
 type RateLimiter struct {
-	currentCount           uint32
-	maxCount             uint32
-	ticker               *time.Ticker
+	currentCount uint32
+	maxCount     uint32
+	ticker       *time.Ticker
 }
 
 func NewRateLimiter(max uint32) *RateLimiter {
