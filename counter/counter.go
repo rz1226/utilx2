@@ -13,6 +13,10 @@ func NewCounter() *Counter {
 	return new(Counter)
 }
 
+func (c *Counter) Clear(){
+	atomic.StoreInt64(&c.value, 0)
+}
+
 func (c *Counter) Add(i int64) {
 	atomic.AddInt64(&c.value, i)
 }
