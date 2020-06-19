@@ -13,7 +13,7 @@ func NewCounter() *Counter {
 	return new(Counter)
 }
 
-func (c *Counter) Clear(){
+func (c *Counter) Clear() {
 	atomic.StoreInt64(&c.value, 0)
 }
 

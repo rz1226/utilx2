@@ -153,7 +153,6 @@ func (e *Ejson) ArrayData() []interface{} {
 	return make([]interface{}, 0)
 }
 
-
 func (e *Ejson) Merge(a *Ejson) (*Ejson, error) {
 	if !e.IsMap() || !a.IsMap() {
 		return nil, errors.New("ejson:merge 两个值必须都是map")
@@ -338,7 +337,7 @@ func (e *Ejson) MapGetFloat64(key string) (float64, error) {
 	num, ok := find.(float64)
 	if !ok {
 		numInt, ok := find.(int)
-		if !ok{
+		if !ok {
 			return 0, errors.New("ejson:MapGetFloat64找到的index不是float64或者int")
 		}
 		num = float64(numInt)
