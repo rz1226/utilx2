@@ -31,9 +31,9 @@ func main(){
 
 func test( p *dbtool.DbPool ){
 
-	 fmt.Println( p.Query("select * from ytk_car_test limit 1 ", nil ))
+	 fmt.Println( p.Query("select * from abc_table_test limit 1 ", nil ))
 
-	//fmt.Println( p.Exec("insert into ytk_car_test set license = '赣B'", nil))
+	//fmt.Println( p.Exec("insert into abc_table_test set license = '赣B'", nil))
 }
 */
 
